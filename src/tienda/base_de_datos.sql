@@ -6,14 +6,14 @@ INSERT INTO categoria_p1 (nombre) VALUES
 ('Salud'), ('Belleza'), ('Alimentos'), ('Bebidas'), ('Automotriz');
 
 INSERT INTO productos_p1 (nombre, descripcion, idCategoria, cantidad, precio) VALUES 
-('iPhone 15 Pro Max', 'Iphone 15 Pro Max, 512GB', 1, 50, 28999.99),
-('Laptop HP', 'HP Pavilion 15, Ryzen 7, 16GB RAM', 1, 30, 21500.00),
-('Zapatillas Nike', 'Nike Air Zoom Pegasus 39', 2, 100, 2799.99),
+('iPhone 15 Pro Max', 'Iphone 15 Pro Max, 512GB', 1, 50, 18999.99),
+('Macbook Air', 'Macbook Air, M2, 16GB RAM', 1, 30, 21500.00),
+('Tenis Nike', 'Nike Air Zoom Pegasus 39', 2, 100, 2799.99),
 ('Aspiradora Dyson', 'Aspiradora sin cable Dyson V15', 3, 20, 13500.00),
-('Bicicleta Trek', 'Bicicleta de montaña Trek Marlin 7', 4, 15, 14500.00),
+('Bicicleta Benotto', 'Bicicleta de montaña Benotto', 4, 15, 14500.00),
 ('Muñeca Barbie', 'Muñeca Barbie edición especial', 5, 80, 899.99),
 ('Termómetro Digital', 'Termómetro infrarrojo sin contacto', 6, 200, 499.99),
-('Crema Hidratante', 'Crema hidratante Neutrogena Hydro Boost', 7, 150, 349.99),
+('Crema CeraVe', 'Crema hidratante CeraVe Protector Solar', 7, 150, 349.99),
 ('Cereal Neskuik', 'Cereal de chocolate Neskui', 8, 300, 89.99),
 ('Coca-Cola 2L', 'Refresco Coca-Cola de 2 litros', 9, 500, 29.99);
 
@@ -28,6 +28,9 @@ INSERT INTO clientes_p1 (nombre, apellido, correo, contrasenia, direccion_envio,
 ('Andrea', 'Mares', 'andrea@gmail.com', 'andreamrs', 'Av. Juárez 200, León', 'Plaza Mayor 300, León', '4777654321', 'Cobre'),
 ('Mateo', 'Matadamas', 'mateo.matadamas@prodigy.net', 'hugosanchez', 'Colonia del Valle 345, Monterrey', 'Av. Garza Sada 120, Monterrey', '8125678901', 'Oro'),
 ('Elon', 'Musk', 'elon.musk@gmail.com', 'marte2030', 'Calle San Pedro 88, Mérida', 'Zona Hotelera 12, Mérida', '9998765432', 'Plata');
+
+INSERT INTO metodo_pago_p1 (nombre) VALUES 
+('Tarjeta de Crédito'), ('Transferencia Electrónica'), ('Pago en Tienda'), ('Depósito Bancario');
 
 INSERT INTO compras_p1 (idCliente, fecha, total) VALUES 
 (1, '2025-03-10 14:30:00', 4599.99),
