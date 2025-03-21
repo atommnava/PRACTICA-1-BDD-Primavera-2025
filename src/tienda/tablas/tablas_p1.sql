@@ -69,6 +69,7 @@ CREATE TABLE asesores_p1(
     contrasenia VARCHAR(255) NOT NULL
 );
 
+-- La llave externa fk_idCliente se repite en otra tabla, por lo que cambiamos el nombre de la llave externa  a fk_idCliente2
 CREATE TABLE tickets_p1 (
                             idTicket INT AUTO_INCREMENT PRIMARY KEY,
                             idCliente INT NOT NULL,
@@ -78,6 +79,6 @@ CREATE TABLE tickets_p1 (
                             calificacion DECIMAL(4,2),
                             fecha_apertura DATETIME DEFAULT CURRENT_TIMESTAMP,
                             fecha_cierre DATETIME DEFAULT NULL,
-                            CONSTRAINT fk_idCliente FOREIGN KEY (idCliente) REFERENCES clientes_p1(idCliente) ON DELETE CASCADE ON UPDATE CASCADE,
+                            CONSTRAINT fk_idCliente2 FOREIGN KEY (idCliente) REFERENCES clientes_p1(idCliente) ON DELETE CASCADE ON UPDATE CASCADE,
                             CONSTRAINT fk_idAsesor FOREIGN KEY (idAsesor) REFERENCES asesores_p1(idAsesor) ON DELETE SET NULL ON UPDATE CASCADE
 );
