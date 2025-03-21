@@ -28,3 +28,28 @@ INSERT INTO clientes_p1 (nombre, apellido, correo, contrasenia, direccion_envio,
 ('Andrea', 'Hernández', 'andrea.hdz@gmail.com', 'andreahdz', 'Av. Juárez 200, León', 'Plaza Mayor 300, León', '4777654321', 'Cobre'),
 ('Hugo', 'Sánchez', 'hugo.sanchez@prodigy.net', 'hugosanchez', 'Colonia del Valle 345, Monterrey', 'Av. Garza Sada 120, Monterrey', '8125678901', 'Oro'),
 ('Patricia', 'Rojas', 'patricia.rojas@gmail.com', 'patyrojas', 'Calle San Pedro 88, Mérida', 'Zona Hotelera 12, Mérida', '9998765432', 'Plata');
+
+INSERT INTO compras_p1 (idCliente, fecha, total) VALUES 
+(1, '2025-03-10 14:30:00', 4599.99),
+(2, '2025-03-11 09:15:00', 18999.99),
+(3, '2025-03-12 17:45:00', 21500.00),
+(4, '2025-03-13 13:20:00', 899.99),
+(5, '2025-03-14 18:00:00', 2799.99),
+(6, '2025-03-15 20:45:00', 14500.00),
+(7, '2025-03-16 10:30:00', 499.99),
+(8, '2025-03-17 15:10:00', 89.99),
+(9, '2025-03-18 12:05:00', 29.99),
+(10, '2025-03-19 19:25:00', 13500.00);
+
+INSERT INTO detalle_compras_p1 (idCompra, idProducto, cantidad, precio_unitario) VALUES 
+(1, 3, 2, 2799.99),
+(2, 1, 1, 18999.99),
+(3, 2, 1, 21500.00),
+(4, 6, 1, 899.99),
+(5, 3, 1, 2799.99),
+(6, 5, 1, 14500.00),
+(7, 7, 1, 499.99),
+(8, 9, 2, 89.99),
+(9, 10, 1, 29.99),
+(10, 4, 1, 13500.00);
+
