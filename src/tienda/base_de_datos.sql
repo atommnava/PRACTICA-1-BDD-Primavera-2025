@@ -24,7 +24,7 @@ INSERT INTO clientes_p1 (nombre, apellido, correo, contrasenia, direccion_envio,
 ('Mariana', 'Torres', 'mariana.torres@outlook.com', 'marianatorres', 'Blvd. Díaz Ordaz 505, Tijuana', 'Zona Centro 23, Tijuana', '6649876543', 'Plata'),
 ('Claudia', 'Sheinbaum', 'clau.sheinbaum@gmail.com', 'clau4t', 'Colonia Roma 456, CDMX', 'Av. Polanco 99, CDMX', '5587654321', 'Oro'),
 ('Chumel', 'Torres', 'chumel.torres@live.com', 'chumelelfeo2024', 'Calle Revolución 12, Puebla', 'Calle 16 de Septiembre 80, Puebla', '2229876543', 'Cobre'),
-('Mia', 'Khalifa', 'mia.khalifa@gmail.com', 'miakhalifa3000', 'Zona Río 21, Tijuana', 'Av. Universidad 100, Tijuana', '6641234567', 'Plata'),
+('Khabib', 'Nurmagomedov', 'khabib.nurmagomedov@gmail.com', 'daegestan', 'Zona Río 21, Tijuana', 'Av. Universidad 100, Tijuana', '6641234567', 'Plata'),
 ('Andrea', 'Mares', 'andrea@gmail.com', 'andreamrs', 'Av. Juárez 200, León', 'Plaza Mayor 300, León', '4777654321', 'Cobre'),
 ('Mateo', 'Matadamas', 'mateo.matadamas@prodigy.net', 'hugosanchez', 'Colonia del Valle 345, Monterrey', 'Av. Garza Sada 120, Monterrey', '8125678901', 'Oro'),
 ('Elon', 'Musk', 'elon.musk@gmail.com', 'marte2030', 'Calle San Pedro 88, Mérida', 'Zona Hotelera 12, Mérida', '9998765432', 'Plata');
@@ -67,4 +67,31 @@ INSERT INTO pagos_p1 (idCompra, idMetodo, monto, fecha_pago, factura) VALUES
 (8, 3, 89.99, '2025-03-17 15:30:00', 'FAC-0008'),
 (9, 4, 29.99, '2025-03-18 12:20:00', 'FAC-0009'),
 (10, 1, 13500.00, '2025-03-19 19:45:00', 'FAC-0010');
+
+INSERT INTO asesores_p1 (nombre, correo, contrasenia) VALUES 
+('Luis Pérez', 'luis.perez@tienda.com', 'luisperez123'),
+('María Gómez', 'maria.gomez@tienda.com', 'mariagomez456'),
+('José Hernández', 'jose.hernandez@tienda.com', 'josehernandez789'),
+('Ana Ramírez', 'ana.ramirez@tienda.com', 'anaramirez101'),
+('Fernando López', 'fernando.lopez@tienda.com', 'fernandolopez2024'),
+('Diana Torres', 'diana.torres@tienda.com', 'dianatorres555'),
+('Raúl Castro', 'raul.castro@tienda.com', 'raulcastro888'),
+('Sofía Medina', 'sofia.medina@tienda.com', 'sofiamedina999'),
+('Carlos Villanueva', 'carlos.villanueva@tienda.com', 'carlosvilla777'),
+('Patricia Rojas', 'patricia.rojas@tienda.com', 'patriciarojas111');
+
+INSERT INTO tickets_p1 (idCliente, idAsesor, descripcion, estado, calificacion, fecha_apertura, fecha_cierre) VALUES 
+(1, 2, 'Problema con el pago de mi compra.', 'Resuelto', 5, '2025-03-10 09:00:00', '2025-03-10 10:30:00'),
+(2, 3, 'No recibí mi pedido a tiempo.', 'Resuelto', 4, '2025-03-11 11:15:00', '2025-03-12 14:00:00'),
+(3, 1, 'Producto defectuoso, necesito devolución.', 'Pendiente', NULL, '2025-03-12 15:45:00', NULL),
+(4, 5, 'Quiero cambiar mi dirección de envío.', 'Resuelto', 5, '2025-03-13 08:20:00', '2025-03-13 09:10:00'),
+(5, 7, 'No puedo acceder a mi cuenta.', 'Resuelto', 4, '2025-03-14 13:00:00', '2025-03-14 14:30:00'),
+(6, 4, 'Duda sobre los métodos de pago disponibles.', 'Resuelto', 5, '2025-03-15 16:40:00', '2025-03-15 17:10:00'),
+(7, NULL, 'Quiero cancelar una compra, ¿cómo lo hago?', 'Pendiente', NULL, '2025-03-16 09:30:00', NULL),
+(8, 8, '¿Cuánto tiempo tarda en llegar mi pedido?', 'Resuelto', 3, '2025-03-17 12:15:00', '2025-03-17 13:00:00'),
+(9, NULL, 'Problema con la facturación de mi compra.', 'Pendiente', NULL, '2025-03-18 14:50:00', NULL),
+(10, 6, 'Quiero información sobre descuentos para clientes Oro.', 'Resuelto', 5, '2025-03-19 10:00:00', '2025-03-19 11:45:00');
+
+
+
 
