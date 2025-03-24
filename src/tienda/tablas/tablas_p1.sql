@@ -82,3 +82,8 @@ CREATE TABLE tickets_p1 (
                             CONSTRAINT fk_idCliente2 FOREIGN KEY (idCliente) REFERENCES clientes_p1(idCliente) ON DELETE CASCADE ON UPDATE CASCADE,
                             CONSTRAINT fk_idAsesor FOREIGN KEY (idAsesor) REFERENCES asesores_p1(idAsesor) ON DELETE SET NULL ON UPDATE CASCADE
 );
+
+CREATE TABLE devoluciónes_p1(
+    idDevolucion INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    -- Por determinar
+);
