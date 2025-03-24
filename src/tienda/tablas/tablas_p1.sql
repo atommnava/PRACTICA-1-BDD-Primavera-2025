@@ -83,7 +83,16 @@ CREATE TABLE tickets_p1 (
                             CONSTRAINT fk_idAsesor FOREIGN KEY (idAsesor) REFERENCES asesores_p1(idAsesor) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
-CREATE TABLE devoluciónes_p1(
-    idDevolucion INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    -- Por determinar
+CREATE TABLE devoluciones_p1 (
+    idDevolucion INT AUTO_INCREMENT PRIMARY KEY,
+    idDetalle INT NOT NULL, -- Se vincula con el producto comprado en detalle_compras_p1
+    idTicket INT DEFAULT NULL, -- Se vincula con un ticket de atención (opcional)
+    fecha_devolucion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    cantidad_devuelta INT NOT NULL CHECK (cantidad_devuelta > 0), -- Cantidad de productos devueltos
+    motivo VARCHAR(255) NOT NULL, -- Razón de la devolución
+    estado ENUM('Pendiente', 'Aprobada', 'Rechazada') DEFAULT 'Pendiente', -- Estado de la devolución
+    reembolso DECIMAL(10,2) DEFAULT 0 CHECK (reembolso >= 0), -- Monto reembolsado al cliente
+    CONSTRAINT fk_idDetalle FOREIGN KEY (idDetalle) REFERENCES detalle_compras_p1(idDetalle) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_idTicket FOREIGN KEY (idTicket) REFERENCES tickets_p1(idTicket) ON DELETE SET NULL ON UPDATE CASCADE
 );
+
