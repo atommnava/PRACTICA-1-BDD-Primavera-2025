@@ -92,19 +92,13 @@ INSERT INTO tickets_p1 (idCliente, idAsesor, descripcion, estado, calificacion, 
 (9, NULL, 'Problema con la facturación de mi compra.', 'Pendiente', NULL, '2025-03-18 14:50:00', NULL),
 (10, 6, 'Quiero información sobre descuentos para clientes Oro.', 'Resuelto', 5, '2025-03-19 10:00:00', '2025-03-19 11:45:00');
 
-INSERT INTO devoluciones_p1 (idDetalle, idTicket, fechaDevolucion, cantidadDevuelta, motivo, estado, reembolso)  
-VALUES  
-(1, 3, '2025-03-10', 2, 'Producto defectuoso', 'Aprobada', 500.00),  
-(2, NULL, '2025-02-20', 1, 'No era lo que esperaba', 'Pendiente', 250.00),  
-(5, 7, '2025-01-15', 3, 'Fecha de expiración cercana', 'Aprobada', 750.00),  
-(8, 12, '2025-03-05', 1, 'Producto equivocado enviado', 'Rechazada', 0.00),  
-(10, NULL, '2025-02-25', 2, 'Tamaño incorrecto', 'Pendiente', 400.00),  
-(15, 5, '2025-01-30', 1, 'Dañado en el envío', 'Aprobada', 300.00),  
-(18, NULL, '2025-02-10', 4, 'Pedido duplicado', 'Aprobada', 800.00),  
-(20, 9, '2025-03-12', 1, 'Cambio de opinión', 'Rechazada', 0.00),  
-(22, NULL, '2025-02-28', 3, 'Producto roto', 'Aprobada', 900.00),  
-(25, 14, '2025-03-18', 2, 'Defecto de fábrica', 'Pendiente', 600.00);  
-
+INSERT INTO devoluciones_p1 (idDetalle, idTicket, cantidad_devuelta, motivo, estado, reembolso) VALUES
+-- Devolución de Julen Gómez (Cliente ID 3) por un MacBook Air defectuoso
+(3, 1, 1, 'Producto defectuoso, necesito devolución.', 'Pendiente', 24000.00),
+-- Devolución de un Termómetro Digital por cancelación de compra (sin ticket asociado)
+(7, NULL, 1, 'Quiero cancelar una compra, ¿cómo lo hago?', 'Pendiente', 180.00),
+-- Devolución relacionada con facturación de una Coca-Cola (cliente Mateo Matadamas, con ticket)
+(9, 3, 1, 'Problema con la facturación de mi compra.', 'Pendiente', 20.00);
 
 
 
